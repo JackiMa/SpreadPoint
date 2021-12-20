@@ -24,10 +24,10 @@ int gX_Layers = 10; // 全局定义变量 探测器构型的XYZ
 int gY_Layers = 10;
 int gZ_Layers = 67;
 double gdetUnit_XY = 40.4;
-int RadiusMax = 100; // 要计算圆柱的半径的变化范围
-int RadiusMin = 100;
+int RadiusMax = 54; // 要计算圆柱的半径的变化范围
+int RadiusMin = 42;
 
-int nPoints = 1e5; // 模拟撒点的个数
+int nPoints = 1e7; // 模拟撒点的个数
 int Radius = 21;   // 要计算圆柱的半径 这里统一以mm为单位，故省略
 int Xoffsets = 4;  // 模拟seed的中心位置（不是坐标，是索引）
 int Yoffsets = 5;  // 0-9
