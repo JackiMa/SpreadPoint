@@ -24,16 +24,16 @@ int gX_Layers = 10; // 全局定义变量 探测器构型的XYZ
 int gY_Layers = 10;
 int gZ_Layers = 67;
 double gdetUnit_XY = 40.4;
-int RadiusMax = 54; // 要计算圆柱的半径的变化范围
-int RadiusMin = 42;
+int RadiusMax = 150; // 要计算圆柱的半径的变化范围
+int RadiusMin = 126;
 
-int nPoints = 2e3; // 模拟撒点的个数
-int Radius = 100;   // 要计算圆柱的半径 这里统一以mm为单位，故省略
+int nPoints = 1e7; // 模拟撒点的个数
+int Radius = 50;   // 要计算圆柱的半径 这里统一以mm为单位，故省略
 int Xoffsets = 4;  // 模拟seed的中心位置（不是坐标，是索引）
 int Yoffsets = 5;  // 0-9
 
 // 控制参数
-bool isDraw = 1; //  ==1 只计算一次，需指定cellID。 如果画图那么不生成csv
+bool isDraw = 0; //  ==1 只计算一次，需指定cellID。 如果画图那么不生成csv
 string filenameTitle = "WeightResult";
 
 class DetectorUnitPoint
@@ -84,7 +84,7 @@ inline void drawDetector();
 inline void makecsvTitle(string csvName);
 inline void SpreadSim();
 
-void spreading()
+void spreading126()
 {
     NofCells = gX_Layers * gY_Layers + 1; // 仿照G4中NofCell，故比总数+1
     for (int index = 0; index < NofCells - 1; index++)

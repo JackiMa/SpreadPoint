@@ -29,7 +29,7 @@ void GetWeight(double dataList[fNofcell],int cellID, int radius){
 	// 故不需要返回值
     fstream fin;
     vector<string>  dataListstring; //创建一个vector<string>对象
-    string filename = "WeightResult" + to_string(radius)+".csv";
+    string filename = "WeightResultList/WeightResult" + to_string(radius)+".csv";
     fin.open(filename);
     string line; //保存读入的每一行
     // double *dataList = new double[fNofcell];

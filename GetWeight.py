@@ -3,7 +3,7 @@
 # cellID 待查询中心点的位置
 # raidus 待查询的半径大小，单位mm，为int
 def GetWeight(cellID, radius):
-    filename = "WeightResult"+str(radius)+".csv"
+    filename = "WeightResultList/WeightResult"+str(radius)+".csv"
 
     with open(filename, 'r') as f:
         for _ in range(cellID+1):  # +1 是为了把表头去掉
